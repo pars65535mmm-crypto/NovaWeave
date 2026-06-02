@@ -1,50 +1,59 @@
 # NovaWeave
 
-NovaWeave is a visual node-based Minecraft Mod generator.
+NovaWeave is an experimental visual Minecraft mod generator.
 
-Build logic with nodes, convert it into Java code, and export Forge projects directly.
+The long-term goal is to create Minecraft mods by connecting nodes instead of writing Java code manually.
 
-## Features
+## Current State
 
-- Visual node editor
-- JSON-driven node system
-- Automatic Java code generation
-- Forge 1.20.1 project export
+⚠ Very Early Development
+
+NovaWeave is currently a prototype and should not be considered stable.
+
+Most systems are still being tested and may change significantly between versions.
+
+## Experimental Features
+
+The following systems currently exist, but are still under development and testing:
+
+- Basic node editor
+- JSON-based node definitions
+- Java code generation
+- Forge project export
 - Variables
-- Math operations
-- Conditions (IF)
-- Loops (FOR / WHILE)
 - Compare operators
+- IF branches
+- FOR loops
+- WHILE loops
+- Math operations
+- Position nodes
 - Explosion node
-- Player position node
 
-## Example
+The existence of a feature does not necessarily mean it is fully tested or production-ready.
 
-text Player Right Click     ↓ IF     ↓ Explosion 
+## Current Limitations
 
-Generates:
+Many core systems are still incomplete.
 
-java if (condition) {     world.explode(...); } 
+Examples include:
 
-## Current Status
+- User interface
+- Menu system
+- Project management
+- Documentation
+- Large-scale testing
+- Multi-file generation
+- Minecraft event coverage
+- Minecraft action coverage
+- Fabric support
 
-Experimental
+Generated code should always be reviewed before use.
 
-The project is under active development.
+## Goal
 
-## Roadmap
+Long-term vision:
 
-- [x] JSON node system
-- [x] IF
-- [x] FOR
-- [x] WHILE
-- [x] Variables
-- [x] Forge export
-- [ ] Fabric export
-- [ ] Particle nodes
-- [ ] Chat message nodes
-- [ ] Entity nodes
-- [ ] Full Minecraft event library
+Visual Nodes → Java Source → Minecraft Mod
 
 ## License
 
