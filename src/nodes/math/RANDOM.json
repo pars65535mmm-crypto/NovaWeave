@@ -1,0 +1,25 @@
+{
+  "id": "RANDOM",
+  "displayName": "Random Number",
+  "category": "Math",
+  "runtimeType": "RANDOM",
+  "resolverType": "EXPRESSION",
+  "expressionTemplate": "((float)(java.lang.Math.random() * (${max} - ${min}) + ${min}))",
+  "requiredImports": [
+    "java.lang.Math"
+  ],
+  "color": "#4a90e2",
+  "icon": "dice",
+  "properties": [
+    { "id": "min", "type": "number", "default": 1.0, "label": "Min Value" },
+    { "id": "max", "type": "number", "default": 10.0, "label": "Max Value" }
+  ],
+  "inputs": [],
+  "outputs": [
+    { "id": "value", "type": "NUMBER" }
+  ],
+  "codeTemplate": {
+    "fabric": "(Math.random() * (${max} - ${min}) + ${min})",
+    "forge": "(Math.random() * (${max} - ${min}) + ${min})"
+  }
+}

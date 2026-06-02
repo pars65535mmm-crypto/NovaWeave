@@ -1,0 +1,70 @@
+/* 画面全体の基礎（キープ） */
+html,
+body,
+#app {
+  width: 100vw !important;
+  height: 100vh !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #f0f0f0 !important;
+  overflow: hidden !important;
+  font-family: sans-serif !important;
+}
+
+/* Reteのルートコンテナー */
+#app > div {
+  width: 100% !important;
+  height: 100% !important;
+  position: relative !important;
+}
+
+/* 🌟 ノードの見た目（文字はみ出し対策のみに集中！） */
+.rete-node, .node {
+  background: #ffffff !important;
+  border: 2px solid #ff8844 !important; /* 社長オレンジ */
+  border-radius: 8px !important;
+  
+  /* Macの文字はみ出しを防ぐため、横幅をしっかり確保 */
+  min-width: 240px !important; 
+  height: auto !important;
+  padding: 12px !important;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12) !important;
+  color: #333333 !important;
+}
+
+/* タイトルの文字はみ出しガード */
+.node .title, .rete-node .title {
+  font-weight: bold !important;
+  font-size: 14px !important;
+  margin-bottom: 8px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+/* ❌ ソケット位置の強制固定（position: relative等）はReteの計算を壊すので全削除！ */
+/* Reteが元々持っている綺麗な丸と位置をそのまま信じます */
+.rete-socket, .socket {
+  cursor: crosshair !important;
+}
+/* 🌟【超重要】Reteの接続線（SVG）自体が、マウスのクリックを邪魔しないように透過させる */
+svg.rete-connections, 
+svg.connections,
+.rete-connections {
+  pointer-events: none !important; /* クリックやドラッグをすり抜けさせる！ */
+  position: absolute !important;
+  z-index: 5 !important;
+}
+
+/* 🌟【超重要】ただし、線自体のパス（Path）はマウスで触れるように戻す（後で線を消したりするため） */
+svg.rete-connections path,
+svg.connections path {
+  pointer-events: auto !important;
+}
+
+/* 🌟 緑の丸（ソケット）自体は、確実にドラッグイベントをキャッチできるようにガチガチにする */
+.rete-socket, 
+.socket {
+  pointer-events: auto !important; /* 確実にマウスを反応させる */
+  cursor: crosshair !important;
+}

@@ -1,0 +1,33 @@
+{
+  "id": "COMPARE",
+  "displayName": "Compare",
+  "category": "Logic",
+  "runtimeType": "COMPARE",
+  "resolverType": "EXPRESSION",
+  "color": "#4ec9b0",
+  "icon": "code-compare",
+  "properties": [
+    {
+      "id": "operation",
+      "type": "select",
+      "default": "EQUAL",
+      "options": ["==", "!=", ">", "<", ">=", "<="],
+      "label": "Condition"
+    }
+  ],
+  "inputs": [
+    { "id": "a", "type": "NUMBER", "required": true },
+    { "id": "b", "type": "NUMBER", "required": true }
+  ],
+  "outputs": [
+    { "id": "value", "type": "BOOLEAN" }
+  ],
+  "operations": {
+    "EQUAL": "(${a} == ${b})",
+    "NOT_EQUAL": "(${a} != ${b})",
+    "GREATER": "(${a} > ${b})",
+    "LESS": "(${a} < ${b})",
+    "GREATER_EQUAL": "(${a} >= ${b})",
+    "LESS_EQUAL": "(${a} <= ${b})"
+  }
+}

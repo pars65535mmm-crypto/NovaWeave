@@ -1,0 +1,26 @@
+{
+  "id": "VARIABLE_GET",
+  "displayName": "Get Variable",
+  "category": "Variables",
+  "runtimeType": "VARIABLE_GET",
+  "resolverType": "EXPRESSION",
+  "color": "#b5cea8",
+  "icon": "download",
+  "properties": [
+    {
+      "id": "variableName",
+      "type": "text",
+      "default": "damage",
+      "label": "Variable Name"
+    }
+  ],
+  "inputs": [],
+  "outputs": [
+    { "id": "value", "type": "ANY" }
+  ],
+  "expressionTemplate": "${variableName}",
+  "codeTemplate": {
+    "fabric": "${variableName}",
+    "forge": "${variableName}"
+  }
+}

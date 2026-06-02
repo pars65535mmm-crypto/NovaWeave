@@ -1,0 +1,35 @@
+{
+  "id": "VARIABLE_SET",
+  "displayName": "Set Variable",
+  "category": "Variables",
+  "runtimeType": "VARIABLE_SET",
+  "resolverType": "ACTION",
+  "color": "#b5cea8",
+  "icon": "save",
+  "properties": [
+    {
+      "id": "variableName",
+      "type": "text",
+      "default": "damage",
+      "label": "Variable Name"
+    },
+    {
+      "id": "valueType",
+      "type": "select",
+      "default": "NUMBER",
+      "label": "Value Type",
+      "options": ["NUMBER", "BOOLEAN", "STRING", "POSITION"]
+    }
+  ],
+  "inputs": [
+    { "id": "flow", "type": "FLOW" },
+    { "id": "value", "type": "ANY", "required": true }
+  ],
+  "outputs": [
+    { "id": "flow", "type": "FLOW" }
+  ],
+  "codeTemplate": {
+    "fabric": "${variableName} = ${value};",
+    "forge": "${variableName} = ${value};"
+  }
+}

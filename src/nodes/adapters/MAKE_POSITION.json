@@ -1,0 +1,18 @@
+{
+  "id": "MAKE_POSITION",
+  "displayName": "Make Position",
+  "category": "Adapter",
+  "runtimeType": "MAKE_POSITION",
+  "resolverType": "POSITION_PROVIDER",
+  "color": "",
+  "icon": "",
+  "properties": [],
+  "inputs": [
+    { "id": "x", "type": "NUMBER" },
+    { "id": "y", "type": "NUMBER" },
+    { "id": "z", "type": "NUMBER" }
+  ],
+  "outputs": [
+    { "id": "position", "type": "POSITION" }
+  ]
+}

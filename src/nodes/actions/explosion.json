@@ -1,0 +1,39 @@
+{
+  "id": "EXPLOSION",
+  "displayName": "Explosion",
+  "category": "Action",
+  "runtimeType": "EXPLOSION",
+  "resolverType": "ACTION",
+  "color": "#ff4a4a",
+  "icon": "bomb",
+  "properties": [
+    { 
+      "id": "power", 
+      "type": "number", 
+      "default": 4.0,
+      "label": "Explosion Power",
+      "min": 1.0,
+      "max": 16.0,
+      "step": 0.5
+    },
+    { 
+      "id": "explosionType", 
+      "type": "select", 
+      "default": "TNT", 
+      "options": ["TNT", "NONE", "BLOCK", "MOB"],
+      "label": "Interaction Type"
+    }
+  ],
+  "inputs": [
+    { "id": "flow", "type": "FLOW" },
+    { "id": "position", "type": "POSITION", "required": true },
+    { "id": "power", "type": "NUMBER", "required": false }
+  ],
+  "outputs": [
+    { "id": "flow", "type": "FLOW" }
+  ],
+  "codeTemplate": {
+    "fabric": "if (!world.isClient()) {\n    world.createExplosion(null, ${position}, ${power}, net.minecraft.world.World.ExplosionInteraction.${explosionType});\n}",
+    "forge": "if (!world.isClientSide()) {\n    world.explode(null, ${position}, ${power}, net.minecraft.world.level.Level.ExplosionInteraction.${explosionType});\n}"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "id": "FOR",
+  "displayName": "For Loop",
+  "category": "Logic",
+  "runtimeType": "FOR",
+  "resolverType": "FLOW_CONTROL",
+  "color": "#4ec9b0",
+  "icon": "repeat",
+  "properties": [
+    {
+      "id": "variableName",
+      "type": "text",
+      "default": "i",
+      "label": "Loop Variable"
+    },
+    {
+      "id": "valueType",
+      "type": "select",
+      "default": "NUMBER",
+      "label": "Value Type",
+      "options": ["NUMBER", "BOOLEAN", "STRING", "POSITION"]
+    }
+  ],
+  "inputs": [
+    { "id": "flow", "type": "FLOW" },
+    { "id": "start", "type": "NUMBER", "required": true },
+    { "id": "end", "type": "NUMBER", "required": true },
+    { "id": "step", "type": "NUMBER", "required": false }
+  ],
+  "outputs": [
+    { "id": "bodyFlow", "type": "FLOW", "label": "Body" },
+    { "id": "flow", "type": "FLOW", "label": "Next" }
+  ]
+}

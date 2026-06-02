@@ -1,0 +1,35 @@
+{
+  "id": "MATH",
+  "displayName": "Math",
+  "category": "Math",
+  "runtimeType": "MATH",
+  "resolverType": "EXPRESSION",
+  "operations": {
+    "ADD": "(${a} + ${b})",
+    "SUBTRACT": "(${a} - ${b})",
+    "MULTIPLY": "(${a} * ${b})",
+    "DIVIDE": "(${a} / ${b})",
+    "POWER": "(float)java.lang.Math.pow(${a}, ${b})",
+    "RANDOM": "(${a} + (float)(java.lang.Math.random() * (${b} - ${a})))"
+  },
+  "properties": [
+    {
+      "id": "operation",
+      "type": "select",
+      "default": "ADD",
+      "label": "Operation Type",
+      "options": ["ADD", "SUBTRACT", "MULTIPLY", "DIVIDE"]
+    }
+  ],
+  "inputs": [
+    { "id": "a", "type": "NUMBER" },
+    { "id": "b", "type": "NUMBER" }
+  ],
+  "outputs": [
+    { "id": "result", "type": "NUMBER" }
+  ],
+  "codeTemplate": {
+    "fabric": "(${a} ${operation === 'ADD' ? '+' : operation === 'SUBTRACT' ? '-' : operation === 'MULTIPLY' ? '*' : '/'} ${b})",
+    "forge": "(${a} ${operation === 'ADD' ? '+' : operation === 'SUBTRACT' ? '-' : operation === 'MULTIPLY' ? '*' : '/'} ${b})"
+  }
+}

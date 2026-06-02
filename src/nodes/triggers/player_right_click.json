@@ -1,0 +1,13 @@
+{
+  "id": "PLAYER_RIGHT_CLICK",
+  "displayName": "Player Right Click",
+  "category": "Trigger",
+  "color": "#31748f",
+  "icon": "mouse_click",
+  "runtimeType": "PLAYER_RIGHT_CLICK",
+  "inputs": [],
+  "outputs": [
+    { "id": "flow", "type": "FLOW", "required": false }
+  ],
+  "properties": []
+}

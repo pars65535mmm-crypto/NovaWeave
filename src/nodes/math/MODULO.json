@@ -1,0 +1,19 @@
+{
+  "id": "MODULO",
+  "displayName": "Modulo",
+  "category": "Math",
+  "runtimeType": "MODULO",
+  "resolverType": "EXPRESSION",
+  "expressionTemplate": "(${a} % ${b})",
+  "requiredImports": [
+    "java.lang.Math",
+    "com.mojang.logging.LogUtils"
+  ],
+  "inputs": [
+    { "id": "a", "type": "NUMBER" },
+    { "id": "b", "type": "NUMBER" }
+  ],
+  "outputs": [
+    { "id": "value", "type": "NUMBER" }
+  ]
+}

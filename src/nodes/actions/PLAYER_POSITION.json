@@ -1,0 +1,16 @@
+{
+  "id": "PLAYER_POSITION",
+  "displayName": "Player Position",
+  "category": "Minecraft",
+  "runtimeType": "PLAYER_POSITION",
+  "resolverType": "POSITION_PROVIDER",
+  "color": "",
+  "icon": "",
+  "properties": [],
+  "inputs": [],
+  "outputs": [
+    { "id": "x", "type": "NUMBER" },
+    { "id": "y", "type": "NUMBER" },
+    { "id": "z", "type": "NUMBER" }
+  ]
+}

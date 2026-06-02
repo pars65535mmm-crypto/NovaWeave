@@ -1,0 +1,19 @@
+{
+  "id": "NUMBER",
+  "displayName": "Number",
+  "category": "Data",
+  "runtimeType": "NUMBER",
+  "resolverType": "EXPRESSION",
+  "expressionTemplate": "${value}",
+  "properties": [
+    {
+      "id": "value",
+      "type": "number",
+      "default": 0
+    }
+  ],
+  "inputs": [],
+  "outputs": [
+    { "id": "value", "type": "NUMBER", "required": false }
+  ]
+}

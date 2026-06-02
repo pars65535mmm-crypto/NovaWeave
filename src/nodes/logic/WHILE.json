@@ -1,0 +1,28 @@
+{
+  "id": "WHILE",
+  "displayName": "While Loop",
+  "category": "Logic",
+  "runtimeType": "WHILE",
+  "resolverType": "FLOW_CONTROL",
+  "color": "#4ec9b0",
+  "icon": "rotate-cw",
+  "properties": [
+    {
+      "id": "guardLimit",
+      "type": "number",
+      "default": 10000,
+      "label": "Guard Limit",
+      "min": 1,
+      "max": 100000,
+      "step": 1
+    }
+  ],
+  "inputs": [
+    { "id": "flow", "type": "FLOW" },
+    { "id": "condition", "type": "BOOLEAN", "required": true }
+  ],
+  "outputs": [
+    { "id": "bodyFlow", "type": "FLOW", "label": "Body" },
+    { "id": "flow", "type": "FLOW", "label": "Next" }
+  ]
+}

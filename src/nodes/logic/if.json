@@ -1,0 +1,22 @@
+{
+  "id": "IF",
+  "displayName": "If (Branch)",
+  "category": "Logic",
+  "runtimeType": "IF",
+  "resolverType": "FLOW_CONTROL",
+  "color": "#4ec9b0",
+  "icon": "split",
+  "properties": [],
+  "inputs": [
+    { "id": "flow", "type": "FLOW" },
+    { "id": "condition", "type": "BOOLEAN", "required": true }
+  ],
+  "outputs": [
+    { "id": "trueFlow", "type": "FLOW", "label": "True" },
+    { "id": "falseFlow", "type": "FLOW", "label": "False" }
+  ],
+  "codeTemplate": {
+    "fabric": "if (${condition}) {\n${trueBranch}\n}",
+    "forge": "if (${condition}) {\n${trueBranch}\n}"
+  }
+}
